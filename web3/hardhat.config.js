@@ -32,7 +32,19 @@ module.exports = {
     tests: "./test",
   },
   solidity: {
-    version: "0.8.17",
+    version: "0.8.9",
+    defaultNetwork: 'localhost',
+    networks: {
+      localhost: {
+        url: "http://127.0.0.1:8545",
+        accounts: [process.env.LOCAL_PRIVATE_KEY]
+      },
+      hardhat: {},
+      goerli: {
+        url: 'https://rpc.ankr.com/eth_goerli',
+        accounts: [process.env.PRIVATE_KEY]
+      }
+    },
     settings: {
       optimizer: {
         enabled: true,
