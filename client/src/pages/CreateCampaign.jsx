@@ -12,7 +12,7 @@ const CreateCampaign = () => {
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
     const { createCampaign } = useStateContext();
-    const [form, setform] = useState({
+    const [form, setForm] = useState({
         name: '',
         title: '',
         description: '',
@@ -22,7 +22,7 @@ const CreateCampaign = () => {
     });
 
     const handleFormFieldChange = (fieldName, e) => {
-        setform({ ...form, [fieldName]: e.target.value })
+        setForm({ ...form, [fieldName]: e.target.value })
 
     }
     const handleSubmit = async (e) => {
